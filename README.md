@@ -4,9 +4,9 @@ Local build, test and deploy your [gorilla/mux](https://github.com/gorilla/mux) 
 
 # Why
 
-As Lambda has [container image support](https://aws.amazon.com/tw/blogs/aws/new-for-aws-lambda-container-image-support/) since AWS re:Invent 2020, the great advantages is that we can build our applications locally, bundling as container image, testing locally and eventually deploy it to `AWS Lambda`, `AWS Fargate`, `Amazon ECS` and even `Amazon EKS` with very little or even zero code change.
+As Lambda has [container image support](https://aws.amazon.com/tw/blogs/aws/new-for-aws-lambda-container-image-support/) since AWS re:Invent 2020, one of the great advantages is that we can build our applications locally, bundling as container image, testing locally and eventually deploy it to `AWS Lambda`, `AWS Fargate`, `Amazon ECS` and even `Amazon EKS` with very little or even zero code change.
 
-This sample demonstrates how to write a Golang web service with [gorilla/mux](https://github.com/gorilla/mux) so you can develop and test locally and eventually deploy `AWS Lambda` and `AWS Fargate` **at the same time** with `AWS CDK`.
+This sample demonstrates how to write a Golang web service with [gorilla/mux](https://github.com/gorilla/mux) with exactly the same code for all different AWS environments while you can build and test locally and eventually deploy `AWS Lambda` and `AWS Fargate` **at the same time** with `AWS CDK`.
 
 # Deploy
 
