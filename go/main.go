@@ -14,7 +14,7 @@ import (
 )
 
 const (
-	DEFAULT_SERVICE_NAME string = "mux"
+	DEFAULT_SERVICE_NAME string = "gorillamux"
 	DEFAULT_VERSION      string = "1.0"
 )
 
@@ -23,6 +23,8 @@ var adapter *gorillamux.GorillaMuxAdapter
 
 func init() {
 	r = mux.NewRouter()
+	// catch everything
+	r.PathPrefix("/").HandlerFunc(HomeHandler)
 	adapter = gorillamux.New(r)
 }
 
@@ -30,7 +32,6 @@ func main() {
 	if isInLambda() {
 		lambda.Start(LambdaHandler)
 	} else {
-		r.HandleFunc("/", HomeHandler)
 		listenOn := "0.0.0.0:8080"
 		log.Printf("Start listening on http://%v", listenOn)
 		log.Fatal(http.ListenAndServe(listenOn, r))

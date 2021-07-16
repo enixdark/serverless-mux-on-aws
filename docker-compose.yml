@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  golang-order:
+    build:
+      context: ./go
+      dockerfile: Dockerfile.fargate
+    container_name: mux
+    ports:
+      - 80:8080
