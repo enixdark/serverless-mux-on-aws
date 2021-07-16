@@ -2,6 +2,8 @@
 
 Local build, test and deploy your [gorilla/mux](https://github.com/gorilla/mux) application for **both** `AWS Lambda` and `AWS Fargate` with AWS CDK.
 
+![](images/serverless-mux-go.svg)
+
 # Why
 
 As Lambda has [container image support](https://aws.amazon.com/tw/blogs/aws/new-for-aws-lambda-container-image-support/) since AWS re:Invent 2020, one of the great advantages is that we can build our applications locally, bundling as container image, testing locally and eventually deploy it to `AWS Lambda`, `AWS Fargate`, `Amazon ECS` and even `Amazon EKS` with very little or even zero code change.
